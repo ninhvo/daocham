@@ -1,0 +1,125 @@
+.introduction {
+  background-color: #fff;
+  .block-title.text-left {
+    span {
+      background-color: #fff;
+    }
+  }
+  .intro-title {
+    color: #212121;
+    @include rem('font-size', 26);
+    padding: 20px 0 12px;
+    text-align: center;
+  }
+  .intro-text {
+    @include rem('font-size', 18);
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .content {
+    p {
+      color: #212121;
+      @include rem('font-size', 15);
+      line-height: 1.7333333333;
+      padding: 20px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+.list-introduction {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 40px 0;
+  .item {
+    @include rem('font-size', 15);
+    color: #212121;
+    @include breakpoint(767) {
+      padding-bottom: 40px;
+    }
+  }
+  .text {
+    padding-top: 10px;
+  }
+}
+.list-customer-review {
+  padding-bottom: 20px;
+  overflow: hidden;
+  .item {
+    padding-left: 58px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  .description {
+    color: #F5F5F5;
+    @include rem('font-size', 14);
+    font-weight: 400;
+    padding-top: 10px;
+  }
+  .avatar-image {
+    width: 60px;
+    height: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    img {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  .name {
+    color: #F5F5F5;
+    @include rem('font-size', 14);
+    font-weight: 700;
+    padding-bottom: 4px;
+    &:before {
+      background-color: #fff;
+      content: "";
+      display: block;
+      margin: 25px 0 10px;
+      width: 40px;
+      height: 2px;
+    }
+  }
+  .pos {
+    color: #F5F5F5;
+    @include rem('font-size', 14);
+  }
+  .ficon-quote {
+    color: #0056A5;
+    position: absolute;
+    left: 10px;
+    top: 75px;
+    font-size: 27px;
+  }
+}
+.partner-content {
+  .block-title {
+    margin: 0 50px;
+    .text {
+      background-color: #fff;
+    }
+    @include breakpoint(767) {
+      margin: 0 10px;
+    }
+  }
+}
+.list-partner-logo {
+  .item {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+
+

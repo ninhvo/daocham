@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'clc';
+  src:  url('../fonts/clc.eot?ojn6u1');
+  src:  url('../fonts/clc.eot?ojn6u1#iefix') format('embedded-opentype'),
+    url('../fonts/clc.ttf?ojn6u1') format('truetype'),
+    url('../fonts/clc.woff?ojn6u1') format('woff'),
+    url('../fonts/clc.svg?ojn6u1#clc') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ficon-"], [class*=" ficon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'clc' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ficon-location:before {
+  content: "\e909";
+}
+.ficon-quote:before {
+  content: "\e900";
+}
+.ficon-right-arrow:before {
+  content: "\e904";
+}
+.ficon-right-arrow2:before {
+  content: "\e905";
+}
+.ficon-home:before {
+  content: "\e903";
+}
+.ficon-facebook:before {
+  content: "\e901";
+}
+.ficon-google-plus:before {
+  content: "\e902";
+}
+.ficon-twitter:before {
+  content: "\e906";
+}
+.ficon-media-play-symbol:before {
+  content: "\e907";
+}
+.ficon-move-to-next:before {
+  content: "\e908";
+}
+.ficon-search:before {
+  content: "\e90a";
+}

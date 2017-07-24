@@ -1,0 +1,40 @@
+.page-introduction {
+  color: #212121;
+  @include rem('font-size', 14);
+  padding: 0 15px 15px;
+}
+.other-services {
+  .list-tour-categories {
+    .block-content {
+      margin-bottom: 30px;
+    }
+    .book-tour {
+      .text-price {
+        max-width: 100%;
+      }
+    }
+  }
+  .image-banner {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+.other-right-services {
+  .item {
+    padding: 5px 0;
+    a {
+      color: #212121;
+      font-weight: 600;
+      &:hover {
+        color: #005CB5;
+      }
+    }
+    .ficon-location {
+      color: #005CB5;
+      float: left;
+      margin: 3px 10px 0 0;
+    }
+  }
+}
