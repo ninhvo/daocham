@@ -8,6 +8,9 @@
 .text-left {
   text-align: left !important;
 }
+.bd0 {
+  border: none !important;
+}
 // Margin helper classes
 @for $i from 0 through 13 {
   $value: $i*5;

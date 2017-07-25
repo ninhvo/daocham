@@ -15,6 +15,7 @@
     visibility: hidden;
     opacity: 0;
     left: -100%;
+    z-index: 10000;
     @include transition(all .5s ease);
     &.is-opend {
       left: 0;
@@ -44,9 +45,17 @@
       padding: 15px 20px;
       height: calc(100vh - 100px);
       overflow: auto;
+      .select-language .select2-container--default .select2-selection--single {
+        height: 25px;
+      }
+      .select-language .select2-container--default .select2-selection--single .select2-selection__rendered {
+        height: 25px;
+        line-height: 25px;
+        text-align: right;
+      }
     }
   }
-  .main-navigation .navigation-list .item {
+  .main-navigation .navigation-list .list .item {
     display: block;
     text-align: left;
     .arrow-box {

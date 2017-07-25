@@ -4,6 +4,9 @@
     span {
       background-color: #fff;
     }
+    @include breakpoint(767) {
+      margin: 0;
+    }
   }
   .intro-title {
     color: #212121;
