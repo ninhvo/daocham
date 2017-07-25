@@ -14,6 +14,21 @@ $(document).ready(function(){
     variableWidth: true
   });
 
+  $('.list-categories').slick({
+    slidesToShow: 3,
+    autoplay: false,
+    arrows: true,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
   $('.select-language .select').select2({
     minimumResultsForSearch: Infinity,
     templateSelection: formatState,
