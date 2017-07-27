@@ -1,0 +1,25 @@
+.tour-detail {
+  .tab-container {
+    border: 1px solid #E0E9EC;
+    .tab-header {
+      border-bottom: 1px solid #E0E9EC;
+      .tab-header-item {
+        display: inline-block;
+      }
+      .item {
+        display: block;
+        padding: 13px 40px;
+        border-bottom: 1px solid #E0E9EC;
+        margin-bottom: -1px;
+        &.active {
+          background-color: #F9F9F9;
+          border-top: 3px solid #005CB5;
+          border-bottom-color: #F9F9F9;
+        }
+      }
+    }
+    .tab-content {
+      background-color: #F9F9F9;
+    }
+  }
+}

@@ -14,6 +14,13 @@ $(document).ready(function(){
     variableWidth: true
   });
 
+  $('.slider-image').slick({
+    slidesToShow: 1,
+    autoplay: false,
+    arrows: true,
+    dots: false
+  });
+
   $('.list-categories').slick({
     slidesToShow: 3,
     autoplay: false,
