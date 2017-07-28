@@ -8,7 +8,7 @@ $(document).ready(function(){
   $('.list-gallery').slick({
     centerMode: true,
     slidesToShow: 3,
-    autoplay: false,
+    autoplay: true,
     arrows: true,
     dots: false,
     variableWidth: true
@@ -24,7 +24,7 @@ $(document).ready(function(){
   $('.list-categories').slick({
     slidesToShow: 3,
     autoplay: false,
-    arrows: true,
+    arrows: false,
     dots: false,
     responsive: [
       {
@@ -51,12 +51,12 @@ $(document).ready(function(){
   if ($(window).width() > 767) {
     $('.main-navigation .navigation-list .item').on('mouseover', function(e) {
       if ($(this).find('.sub-nav').length) {
-        $('.main-container').addClass('menu-hover');
+        $('.wrapper').addClass('menu-hover');
       }
     });
     $('.main-navigation .navigation-list .item').on('mouseout', function(e) {
       if ($(this).find('.sub-nav').length) {
-        $('.main-container').removeClass('menu-hover');
+        $('.wrapper').removeClass('menu-hover');
       }
     });
   }
