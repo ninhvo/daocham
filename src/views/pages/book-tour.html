@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- include head.html -->
+  @@include('../layouts/head.html', {
+    "title": "Book Tour"
+  })
+  <!-- include styles.html -->
+  @@include('../layouts/styles.html')
+</head>
+<body>
+  <div class="wrapper">
+    <!-- include header.html -->
+    @@include('../layouts/header.html')
+
+    <section class="main-container">
+      <div class="block-container book-tour-page-container">
+        @@include('../partials/breadcrumb.html')
+        <div class="container-fluid">
+          <div class="row">
+            <div class="center">
+              <div class="list-tour-categories col-xs-12 pb20">
+                <h3 class="block-title text-left ml0 mr15 pt35"><span class="text pl0">Đăng ký Tour</span></h3>
+                <div class="book-tour-content">
+                  <div class="book-detail">
+                    <h4 class="tour-title">Tour Cù Lao Chàm 1 ngày 1 đêm</h4>
+                    <p class="text"><span>Khởi hành:</span> <b>12/07/2017</b></p>
+                    <p class="text"><span>Nơi khởi hành:</span> <b>Quảng Nam</b></p>
+                    <p class="text"><span>Điểm đến:</span> <b>Cù Lao Chàm</b></p>
+                    <p class="text"><span>Chi phí:</span> <b class="text-blue">2.000.000 VNĐ</b></p>
+                  </div>
+                  <div class="form-book row">
+                    <form>
+                      <div class="form-item col-xs-12 col-sm-4">
+                        <label class="form-label">Họ và tên</label>
+                        <div class="input-control">
+                          <input type="text" name="" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-item col-xs-12 col-sm-4">
+                        <label class="form-label">Email <span class="required">Bắt buộc</span></label>
+                        <div class="input-control">
+                          <input type="text" name="" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-item col-xs-12 col-sm-4">
+                        <label class="form-label">Số điện thoại <span class="required">Bắt buộc</span></label>
+                        <div class="input-control">
+                          <input type="text" name="" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-item col-xs-12 col-sm-2">
+                        <label class="form-label">Người lớn</label>
+                        <div class="input-control">
+                          <input type="number" name="" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-item col-xs-12 col-sm-2">
+                        <label class="form-label">Trẻ em</label>
+                        <div class="input-control">
+                          <input type="number" name="" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-item col-xs-12 col-sm-2">
+                        <label class="form-label">Trẻ nhỏ</label>
+                        <div class="input-control">
+                          <input type="number" name="" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-2"></div>
+                      <div class="form-item col-xs-12 col-sm-4">
+                        <div class="total-content">
+                          <p class="txt-total">Tổng tiền <span class="number">3.600.000 VNĐ</span></p>
+                          <div class="contact-info">
+                            <p class="text"><span>Tư vấn tour:</span> <span class="text-red">0235 3919 917</span></p>
+                            <p class="text"><span>Hotline:</span> <span class="text-red">0932 569 966 (24/24)</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="button">
+                        <button class="btn btn-effect btn-book-tour"><span>Đăng ký tour</span></button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </section>
+
+    <!-- include footer.html -->
+    @@include('../layouts/footer.html')
+  </div>
+
+  <!-- include scripts.html -->
+  @@include('../layouts/scripts.html')
+</body>
+</html>

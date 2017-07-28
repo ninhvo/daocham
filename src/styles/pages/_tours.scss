@@ -3,7 +3,9 @@
   .tab-container {
     .tab-header {
       white-space: nowrap;
-      overflow: auto;
+      @include breakpoint(767) {
+        overflow: auto;
+      }
       .tab-header-item {
         display: inline-block;
       }
@@ -13,7 +15,7 @@
         @include rem('font-size', 14);
         font-weight: 500;
         border-top: 3px solid transparent;
-        border-bottom: 1px solid #E0E9EC;
+        border-bottom: 1px solid #e0e9ec;
         border-left: 1px solid transparent;
         border-right: 1px solid transparent;
         margin-bottom: -1px;
@@ -24,17 +26,17 @@
           @include rem('font-size', 12);
         }
         &.active {
-          background-color: #F9F9F9;
-          border-top: 3px solid #005CB5;
-          border-bottom-color: #F9F9F9;
-          border-left-color: #E0E9EC;
-          border-right-color: #E0E9EC;
+          background-color: #f9f9f9;
+          border-top: 3px solid #005cb5;
+          border-bottom-color: #f9f9f9;
+          border-left-color: #e0e9ec;
+          border-right-color: #e0e9ec;
         }
       }
     }
     .tab-content {
-      background-color: #F9F9F9;
-      border: 1px solid #E0E9EC;
+      background-color: #f9f9f9;
+      border: 1px solid #e0e9ec;
       padding: 20px 20px 40px;
     }
     .tab-item {
@@ -114,7 +116,7 @@
     border-top: 1px solid #dbdbdb;
     padding: 15px;
     .text {
-      color: #2C2C2C;
+      color: #2c2c2c;
       @include rem('font-size', 14);
       line-height: 1.9324;
     }
@@ -140,12 +142,12 @@
     padding: 20px;
   }
   .btn-book-tour {
-    background-color: #FF800F;
-    border: 1px solid #FF800F;
+    background-color: #ff800f;
+    border: 1px solid #ff800f;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.07);
     border-radius: 100px;
     display: inline-block;
-    color: #FFF;
+    color: #fff;
     @include rem('font-size', 16);
     font-weight: 400;
     padding: 8px 30px;
@@ -160,5 +162,111 @@
     .text-red {
       color: #d0011b;
     }
+  }
+}
+
+.book-tour-content {
+  .form-item {
+    padding-bottom: 30px;
+  }
+  .form-label {
+    color: #212121;
+    display: block;
+    @include rem('font-size', 14);
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    .required {
+      color: #72889d;
+      @include rem('font-size', 12);
+      font-weight: 400;
+      float: right;
+      text-transform: none;
+    }
+  }
+  .form-control {
+    border-color: #e0e9ec;
+    box-shadow: none;
+    @include rem('font-size', 12);
+  }
+  .total-content {
+    background-color: #f9f9f9;
+    line-height: 1.9;
+    .txt-total {
+      color: #005cb5;
+      @include rem('font-size', 14);
+      font-weight: 600;
+      padding: 15px;
+      text-transform: uppercase;
+    }
+    .number {
+      color: #ff800f;
+      @include rem('font-size', 24);
+      float: right;
+      line-height: 1;
+    }
+  }
+  .contact-info {
+    border-top: 1px solid #dbdbdb;
+    @include rem('font-size', 14);
+    padding: 15px;
+    font-weight: 500;
+    line-height: 1.9;
+    .text-red {
+      color: #d0011b;
+    }
+  }
+}
+
+.book-tour-page-container {
+  background-color: #fff;
+  .block-title {
+    color: #212121;
+    font-family: 'roboto';
+    @include rem('font-size', 32);
+    text-transform: none;
+    .text {
+      background-color: #fff;
+    }
+    &::after {
+      border-bottom: 2px solid #005cb5;
+      content: "";
+      display: block;
+      width: 42px;
+      margin-top: 5px;
+    }
+  }
+  .book-detail {
+    padding: 15px 0;
+    .tour-title {
+      color: #005cb5;
+      @include rem('font-size', 22);
+      font-weight: 600;
+      padding-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .text {
+      color: #2c2c2c;
+      @include rem('font-size', 14);
+      line-height: 1.9324;
+    }
+    .text-blue {
+      color: #005cb5;
+    }
+  }
+  .button {
+    text-align: center;
+    padding: 20px;
+  }
+  .btn-book-tour {
+    background-color: #005cb5;
+    border: 1px solid #005cb5;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 100px;
+    display: inline-block;
+    color: #fff;
+    @include rem('font-size', 16);
+    font-weight: 400;
+    padding: 8px 30px;
+    text-transform: uppercase;
   }
 }
