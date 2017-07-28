@@ -252,6 +252,11 @@
         float: left;
         width: 25%;
         padding-right: 20px;
+        &:hover {
+          a {
+            color: #005CB5;
+          }
+        }
       }
       .image {
         display: block;
@@ -261,6 +266,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         overflow: hidden;
+        @include transition(all .3s ease);
         img {
           max-width: 100%;
           height: auto;
@@ -295,6 +301,9 @@
           padding: 5px 24px;
           line-height: 30px;
           white-space: nowrap;
+          &:hover {
+            color: #005CB5;
+          }
         }
       }
     }

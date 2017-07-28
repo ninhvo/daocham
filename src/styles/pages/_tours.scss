@@ -272,3 +272,36 @@
     text-transform: uppercase;
   }
 }
+
+.list-schedule {
+  list-style: none;
+  .item {
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+  .image {
+    float: left;
+    max-width: 235px;
+    margin-right: 25px;
+    @include breakpoint(800) {
+      max-width: 135px;
+    }
+    @include breakpoint(700) {
+      max-width: 100%;
+      float: none;
+      margin: 0 0 20px;
+    }
+  }
+  .info {
+    overflow: hidden;
+  }
+  .item-title {
+    color: #005CB5;
+    @include rem('font-size', 15);
+    padding-bottom: 10px;
+  }
+  .description {
+    color: #212121;
+    @include rem('font-size', 14);
+  }
+}
