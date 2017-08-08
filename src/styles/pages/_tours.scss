@@ -79,6 +79,14 @@
     margin: 0 auto;
   }
 }
+.other-tours-content {
+  @include breakpoint(800) {
+    overflow: auto;
+    .other-tours {
+      width: 767px;
+    }
+  }
+}
 .tour-comment {
   padding: 15px 0;
 }
