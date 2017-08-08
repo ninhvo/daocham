@@ -22,7 +22,7 @@
   <!-- Google Font -->
   <!-- include styles.html -->
   <link rel="stylesheet" href="styles/vendor-78bd29cc95.min.css">
-  <link rel="stylesheet" href="styles/style-d01669e3f0.min.css">
+  <link rel="stylesheet" href="styles/style-7f63012227.min.css">
 </head>
 
 <body>
@@ -62,7 +62,7 @@
                   <button id="bt-open-menu" class="btn btn-open-menu lines-button x">
                 <span class="lines" />
               </button>
-                  <button class="btn btn-search">
+                  <button class="btn btn-search open-popup-search" data-mfp-src="#popup-search">
                 <span class="ficon-search" />
               </button>
                 </div>
@@ -100,10 +100,10 @@
                 <div class="navigation-list nano">
                   <div class="nano-content">
                     <ul class="list">
-                      <li class="item active"><a href="index.html"><span class="ficon-home"></span></a></li>
-                      <li class="item"><a href="introduction.html">Giới thiệu</a></li>
+                      <li class="item"><a href="index.html"><span class="ficon-home"></span></a></li>
+                      <li class="item active"><a href="introduction.html">Giới thiệu</a></li>
                       <li class="item">
-                        <a href="#">Tour <span class="arrow-box"></span></a>
+                        <a href="#"><span class="arrow-box"></span> Tour</a>
                         <div class="sub-nav">
                           <div class="sub-nav-left">
                             <ul class="list-content">
@@ -147,7 +147,7 @@
                         </div>
                       </li>
                       <li class="item item-service">
-                        <a href="other-services.html">Dịch vụ khác <span class="arrow-box"></span></a>
+                        <a href="other-services.html"><span class="arrow-box"></span> Dịch vụ khác</a>
                         <ul class="sub-nav">
                           <li class="sub-item"><a href="#">Hoạt động thể thao trên biển</a></li>
                           <li class="sub-item"><a href="#">Thuê xe du lịch</a></li>
@@ -198,6 +198,18 @@
       </div>
     </header>
     <div class="dropdown-language"></div>
+    <div style="display: none;">
+      <div id="popup-search" class="search-form-container popup-search">
+        <div class="search-form">
+          <form class="main-form">
+            <div class="input-control">
+              <input type="text" name="search" class="form-control" placeholder="Tìm kiếm..." />
+            </div>
+            <button class="btn btn-search"><span class="ficon-search"></span></button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <section class="main-container">
       <div class="block-container news-page-container">
@@ -385,7 +397,7 @@
 
   <!-- include scripts.html -->
   <script src="scripts/vendor-e4bd57740d.min.js"></script>
-  <script src="scripts/script-65a87d049a.min.js"></script>
+  <script src="scripts/script-60e75b4c81.min.js"></script>
 </body>
 
 </html>

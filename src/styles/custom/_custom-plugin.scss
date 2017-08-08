@@ -31,3 +31,10 @@
     margin-right: 5px;
   }
 }
+
+.mfp-zoom-out-cur .mfp-container {
+  .mfp-close {
+    cursor: pointer;
+    width: 50px;
+  }
+}

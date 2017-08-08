@@ -36,6 +36,20 @@ $(document).ready(function(){
     ]
   });
 
+  $('.open-popup-search').magnificPopup({
+    type: 'inline',
+    midClick: true,
+    showCloseBtn: false,
+    callbacks: {
+      open: function() {
+        $('body').addClass('open-menu');
+      },
+      close: function() {
+        $('body').removeClass('open-menu');
+      }
+    }
+  });
+
   $('.select-language .select').select2({
     minimumResultsForSearch: Infinity,
     templateSelection: formatState,
@@ -63,6 +77,7 @@ $(document).ready(function(){
 
   $('#bt-open-menu, #btn-close-menu').on('click', function(e) {
     $('.main-navigation').toggleClass('is-opend');
+    $('body').toggleClass('open-menu');
   });
 
   $('.gallery-slider .slider-item .item').magnificPopup({

@@ -213,10 +213,18 @@
       @include rem('font-size', 24);
       float: right;
       line-height: 1;
+      @include breakpoint(900) {
+        float: none;
+        white-space: nowrap;
+      }
+      @include breakpoint(767) {
+        float: right;
+      }
     }
   }
   .contact-info {
     border-top: 1px solid #dbdbdb;
+    clear: both;
     @include rem('font-size', 14);
     padding: 15px;
     font-weight: 500;

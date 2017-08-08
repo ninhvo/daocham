@@ -59,8 +59,6 @@
     display: block;
     text-align: left;
     .arrow-box {
-      float: none;
-      margin: 0 0 0 15px;
       &:after {
         border-top-color: #212121;
         top: 40%;
@@ -73,6 +71,12 @@
     }
     &:first-child {
       display: none;
+    }
+    &.active {
+      a {
+        background: none;
+        color: #007BFF;
+      }
     }
   }
   .main-navigation .navigation-list .sub-nav, .main-navigation .navigation-list .item:hover .sub-nav {
