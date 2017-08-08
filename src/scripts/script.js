@@ -105,7 +105,71 @@ $(document).ready(function(){
     $('.tab-item').hide();
     $(target).show();
   })
+
+  var elm = $('#calendar-container');
+  var elmFooter = $('.footer-container');
+
+  var elmOTop = elm.offset().top;
+  var elmOLeft = elm.offset().left;
+  var elmWidth = elm.width();
+  var elmHeight = elm.height();
+
+  var elmFooterOTop = elmFooter.offset().top;
+
+  handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
+
+  $(window).scroll(function(e) {
+    elmOLeft = $('.right-news-container').offset().left;
+    elmHeight = elm.height();
+
+    handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
+  });
+
+  $(window).resize(function(e) {
+    elmOLeft = $('.right-news-container').offset().left;
+    elmHeight = elm.height();
+
+    handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
+  });
+
+  $(window).on('orientationchange', function(event) {
+    elmOLeft = $('.right-news-container').offset().left;
+    elmHeight = elm.height();
+
+    handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
+  });
+
 });
+
+function handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop) {
+
+  if ($(window).width() < 768) {
+    return;
+  }
+
+  var windowScroll = $(window).scrollTop();
+
+  if (windowScroll >= elmOTop - 20) {
+    elm.css({
+      'position': 'fixed',
+      'width': elmWidth,
+      'left': elmOLeft
+    });
+
+    // Vuot qua footer
+    if (windowScroll + elmHeight + 40 >= elmFooterOTop) {
+      elm.css({
+        'top': elmFooter.position().top - windowScroll - elmHeight - 20,
+      });
+    } else {
+      elm.css({
+        'top': '20px',
+      });
+    }
+  } else {
+    elm.removeAttr('style');
+  }
+}
 
 function formatState (state) {
   if (!state.id) { return state.text; }
