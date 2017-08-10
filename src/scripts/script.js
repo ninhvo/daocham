@@ -109,35 +109,52 @@ $(document).ready(function(){
   var elm = $('#calendar-container');
   var elmFooter = $('.footer-container');
 
-  var elmOTop = elm.offset().top;
-  var elmOLeft = elm.offset().left;
-  var elmWidth = elm.width();
-  var elmHeight = elm.height();
+  if (elm.length) {
+    var elmOTop = elm.offset().top;
+    var elmOLeft = elm.offset().left;
+    var elmWidth = elm.width();
+    var elmHeight = elm.height();
 
-  var elmFooterOTop = elmFooter.offset().top;
-
-  handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
-
-  $(window).scroll(function(e) {
-    elmOLeft = $('.right-news-container').offset().left;
-    elmHeight = elm.height();
+    var elmFooterOTop = elmFooter.offset().top;
 
     handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
+
+    $(window).scroll(function(e) {
+      elmOLeft = $('.right-news-container').offset().left;
+      elmHeight = elm.height();
+
+      handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
+    });
+
+    $(window).resize(function(e) {
+      elmOLeft = $('.right-news-container').offset().left;
+      elmHeight = elm.height();
+
+      handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
+    });
+
+    $(window).on('orientationchange', function(event) {
+      elmOLeft = $('.right-news-container').offset().left;
+      elmHeight = elm.height();
+
+      handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
+    });
+  }
+
+  $('.input-number-custom .plus').on('click', function(e) {
+    e.preventDefault();
+    var inputValue = $(this).parent().find('.form-control');
+    inputValue.val(parseInt(inputValue.val()) + 1);
   });
 
-  $(window).resize(function(e) {
-    elmOLeft = $('.right-news-container').offset().left;
-    elmHeight = elm.height();
-
-    handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
+  $('.input-number-custom .minus').on('click', function(e) {
+    e.preventDefault();
+    var inputValue = $(this).parent().find('.form-control');
+    if (parseInt(inputValue.val()) > 0) {
+      inputValue.val(parseInt(inputValue.val()) - 1);
+    }
   });
 
-  $(window).on('orientationchange', function(event) {
-    elmOLeft = $('.right-news-container').offset().left;
-    elmHeight = elm.height();
-
-    handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop);
-  });
 
 });
 

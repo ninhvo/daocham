@@ -321,3 +321,17 @@
     @include rem('font-size', 14);
   }
 }
+
+.list-tour {
+  .list-tour-categories {
+    .block-content {
+      margin-bottom: 30px;
+    }
+  }
+  .image-banner {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
