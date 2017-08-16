@@ -24,7 +24,7 @@ $(document).ready(function(){
   $('.list-categories').slick({
     slidesToShow: 3,
     autoplay: false,
-    arrows: false,
+    arrows: true,
     dots: false,
     responsive: [
       {
