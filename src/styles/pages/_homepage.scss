@@ -20,6 +20,11 @@
     -webkit-overflow-scrolling: touch;
     .categories {
       min-width: 1140px;
+      @include flexbox();
+    }
+    .col-xs-3 {
+      display: flex;
+      float: none;
     }
   }
 }
@@ -115,6 +120,12 @@
   }
 }
 .list-tour-categories {
+  // @media screen and (min-width: 992px) {
+  //   .col-md-4 {
+  //     display: flex;
+  //     float: none;
+  //   }
+  // }
   .bg-image-effect-zoom {
     display: block;
     min-height: 180px;
@@ -146,6 +157,9 @@
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
     position: relative;
     overflow: hidden;
+    @include flexbox();
+    @include flex-direction(column);
+    width: 100%;
     img {
       max-width: 100%;
       height: auto;
@@ -170,13 +184,14 @@
   }
   .info {
     padding: 16px 13px;
+    // min-height: calc(100% - 225px);
+    // min-height: -webkit-calc(100% - 225px);
+    // display: grid;
     .c-title {
-      border-bottom: 1px solid #DEE5ED;
-      padding-bottom: 12px;
       margin-bottom: 12px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
+      // text-overflow: ellipsis;
+      // overflow: hidden;
+      // white-space: nowrap;
       a {
         color: #212121;
         @include rem('font-size', 16);
@@ -187,6 +202,11 @@
           color: #005CB5;
         }
       }
+    }
+    .detail {
+      border-top: 1px solid #DEE5ED;
+      padding-top: 12px;
+      @include align-self(flex-end);
     }
     .text {
       color: #2C2C2C;

@@ -80,6 +80,9 @@
   }
 }
 .other-tours-content {
+  .other-tours {
+    @include flexbox();
+  }
   @include breakpoint(800) {
     overflow: auto;
     .other-tours {
@@ -324,6 +327,7 @@
 
 .list-tour {
   .list-tour-categories {
+    display: flex;
     .block-content {
       margin-bottom: 30px;
     }

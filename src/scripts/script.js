@@ -155,8 +155,31 @@ $(document).ready(function(){
     }
   });
 
+  heightTitle();
 
+  $(window).resize(function(e) {
+    heightTitle();
+  });
+
+  $(window).on('orientationchange', function(event) {
+    heightTitle();
+  });
 });
+
+function heightTitle() {
+  setTimeout(function() {
+    $('.js-height-title').each(function(k, v) {
+      var max = 0;
+      $(v).find('.block-content .info .c-title').removeAttr('style');
+      $(v).find('.block-content .info').each(function(k1, v1) {
+        if ($(v1).height() > max) {
+          max = $(v1).height();
+        }
+      })
+      $(v).find('.block-content .info .c-title').height(max - $(v).find('.detail').outerHeight() - 12);
+    });
+  }, 100);
+}
 
 function handleScroll(elm, elmFooter, elmOTop, elmOLeft, elmWidth, elmHeight, elmFooterOTop) {
 
