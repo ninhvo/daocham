@@ -11,7 +11,9 @@
   }
   .right-content {
     float: right;
-    white-space: nowrap;
+    width: calc(100% - 255px);
+    padding-left: 35px;
+    // white-space: nowrap;
   }
   .footer-logo {
     padding-bottom: 15px;
@@ -43,11 +45,13 @@
       display: inline-block;
       padding: 0 30px 18px 20px;
       vertical-align: top;
+      width: calc(25% - 3px);
       &:first-child {
         border: none;
         padding-left: 0;
       }
       .item {
+        padding-bottom: 5px;
         a {
           color: #212121;
           @include rem('font-size', 13);
