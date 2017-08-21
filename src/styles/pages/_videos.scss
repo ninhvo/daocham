@@ -18,3 +18,18 @@
     }
   }
 }
+.gallery-container {
+  .video-title {
+    padding: 15px 0 0 15px;
+    a {
+      height: unset;
+    }
+  }
+}
+
+.date-video {
+  padding: 0 0 15px 15px;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
