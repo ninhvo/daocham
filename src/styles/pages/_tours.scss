@@ -1,3 +1,34 @@
+.slider-image-1 {
+  img {
+    margin: 0 auto;
+  }
+  .slick-prev, .slick-next {
+    background-color: #ccc;
+    border-radius: 25px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    opacity: .7;
+    z-index: 10;
+  }
+  .slick-prev {
+    left: 25px;
+    &:before {
+      content: "\E905";
+      font-family: clc;
+    }
+  }
+  .slick-next {
+    right: 25px;
+    &:before {
+      content: "\E904";
+      font-family: clc;
+    }
+  }
+}
+.box-images-trip {
+  padding-bottom: 35px;
+}
 .tour-detail {
   padding: 0 15px 15px;
   .tab-container {

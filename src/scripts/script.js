@@ -21,6 +21,15 @@ $(document).ready(function(){
     dots: true
   });
 
+  $('.slider-image-1').slick({
+    dots: false,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    // rtl: true
+  });
+
   $('.list-categories').slick({
     slidesToShow: 3,
     autoplay: false,
