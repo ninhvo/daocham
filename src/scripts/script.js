@@ -227,3 +227,15 @@ function formatState (state) {
   );
   return $state;
 };
+// Scroll menu
+
+
+$('#bt-open-menu').on('click', function(e) {
+  // var height_menu = $(".navigation-list").height();
+  var height_window = $(window).height() - 100;
+  console.log(height_window);
+  // console.log(height_menu);
+  // if (height_window > height_window -100) {
+    $(".main-navigation .navigation-list").css("height", height_window);
+  // }
+});
