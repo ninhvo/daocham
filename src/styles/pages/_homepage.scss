@@ -18,10 +18,13 @@
   .categories-content {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     .categories {
       min-width: 1140px;
       @include flexbox();
-    }
+      }
     .col-xs-3 {
       display: flex;
       float: none;
