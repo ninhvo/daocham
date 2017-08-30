@@ -361,6 +361,9 @@
     display: flex;
     .block-content {
       margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 45px;
+      height: 100%;
     }
   }
   .image-banner {
@@ -369,4 +372,9 @@
       height: auto;
     }
   }
+}
+.block-content {
+  // margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 45px;
 }
