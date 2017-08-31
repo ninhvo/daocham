@@ -17,10 +17,6 @@
 .list-tour-categories {
   .categories-content {
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    &::-webkit-scrollbar {
-      display: none;
-    }
     .categories {
       min-width: 1140px;
       @include flexbox();
@@ -31,6 +27,14 @@
     }
   }
 }
+.categories-content {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .list-categories {
   .bg-image {
     position: absolute;
